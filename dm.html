@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculatrice</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+    <div class="header">Calculatrice</div>
+    <div class="aside"></div>
+    <div class="main">
+        <div class="calculatrice" id="templateCalc">
+            <div id="entry">0</div>
+            <div class="row_scientifique">
+                <button type="button" onclick="Inverse()" class="scient" id="inverse">2nd</button>
+                <button type="button" onclick="Convert()" class="scient" id="convert">deg</button>
+                <button class="scient">sin</button>
+                <button class="scient">cos</button>
+                <button class="scient">tan</button>
+                <button class="scient">X^y</button>
+                <button class="scient">lg</button>
+                <button class="scient">ln</button>
+                <button class="scient">(</button>
+                <button class="scient">)</button>
+            </div>
+            <div class="column_scientifique">
+                <button class="scient">√X</button>
+                <button class="scient">X!</button>
+                <button class="scient">1/X</button>
+                <button class="scient">π</button>
+            </div>
+            <div class="base">
+                <button class="num_pad">1</button>
+                <button class="num_pad">2</button>
+                <button class="num_pad">3</button>
+                <button class="num_pad">4</button>
+                <button class="num_pad">5</button>
+                <button class="num_pad">6</button>
+                <button class="num_pad">7</button>
+                <button class="num_pad">8</button>
+                <button class="num_pad">9</button>
+                <button class="num_pad">e</button>
+                <button class="num_pad">0</button>
+                <button class="num_pad">,</button>
+                <button class="effacement column-span2">AC</button>
+                <button class="effacement">DEL</button>
+                <button class="operateur">÷</button>
+                <button class="operateur">*</button>
+                <button class="operateur">+</button>
+                <button class="operateur">-</button>
+                <button class="operateur" id="egal">=</button>
+            </div>
+            <button type="button" onclick="TemplateCalc()" id="click">Click</button>
+        </div>
+    </div>
+    <div class="footer"></div> 
+    
+</body>
+</html>

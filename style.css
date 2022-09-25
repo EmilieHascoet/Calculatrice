@@ -1,0 +1,132 @@
+body {
+    margin: 0;
+    display: grid;
+    grid-template-areas:
+    'header header header header '
+    'aside main main main';
+    grid-auto-columns: 150px 1fr 1fr 1fr;
+}
+
+/* Titre en hau de page */
+.header {
+    grid-area: header;
+    background-color: black;
+    border-bottom: 5px solid white;
+    padding: 40px;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    font-size: xx-large;
+}
+
+/* barre de navigation à gauche */
+.aside {
+    background-color: black;
+    grid-area: aside;
+    border-right: 5px solid white;
+}
+
+/* Contient une grille avec la calculatrice */
+.main {
+    display: grid;
+    grid-area: main;
+    height: 865px;
+    background-image: url("Classroom.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    /* Centre la calculatrice */
+    justify-content: center;
+    align-content: center;
+}
+
+.calculatrice, .calculatrice > * {
+    display: grid;
+    background-color: black;
+    gap: 5px;
+}
+
+.calculatrice {
+    height: 600px;
+    width: 355px;
+    border-radius: 5%;
+    border: 10px solid black;
+}
+
+/* Nombre de colonnes et lignes de la calculatrice */
+#templateCalc {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto repeat(5, 1fr) 1px;
+}
+
+button {
+    font-size: x-large;
+    /* centre le texte */
+    display: grid;
+    place-content: center;
+}
+
+/* Grille contenant les touches de la calculatrice basique */
+.base {
+    grid-area: -7/-5/-2/-1;
+    grid-template-columns: 1fr 1fr 1fr [operateur] 1fr;
+    grid-template-rows: [effacement] repeat(5, 1fr);
+    grid-auto-flow: dense;
+}
+.operateur {
+    grid-column: operateur/-1;
+    /* se place avant les autres objets*/
+    order: -1;
+}
+.effacement {
+    grid-row: effacement;
+}
+.column-span2 {
+    grid-column-start: span 2;
+}
+
+.row_scientifique {
+    grid-area: 2/1/4/-1;
+    grid-template-columns: repeat(5, 1fr);
+}
+.column_scientifique {
+    grid-area: 4/1/-3/2;
+}
+
+
+/* Fond de différentes couleurs en fonction du type de touche */
+
+.num_pad {
+    background-color: rgb(216,192,196);
+}
+.operateur, .effacement {
+    background-color: rgb(171,161,188)
+}
+.scient {
+    background-color: rgb(125,119,160)
+}
+
+/* Touches spéciales */
+
+/* Bouton pour changer le type de la calculatrice */
+#entry {
+    grid-area: 1/1/2/-1;
+    display: flex;
+    color: white;
+    font-size: xx-large;
+    font-weight: bold;
+    justify-content: flex-end;
+    padding: 30px 10px;
+}
+#click {
+    grid-area: -3/1/span 1/span 1;
+    background-color: black;
+    color: rgb(216,192,196);
+}
+#egal {
+    background-color: rgb(75,76,119);
+    color: white;
+}
+#convert, #inverse {
+    background-color: black;
+    color: rgb(125,119,160);
+}
