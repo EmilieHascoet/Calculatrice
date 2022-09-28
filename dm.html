@@ -13,45 +13,50 @@
     <div class="aside"></div>
     <div class="main">
         <div class="calculatrice" id="templateCalc">
-            <div id="entry">0</div>
+            <div class="output">0</div>
             <div class="row_scientifique">
                 <button type="button" onclick="Inverse()" class="scient" id="inverse">2nd</button>
                 <button type="button" onclick="Convert()" class="scient" id="convert">deg</button>
-                <button class="scient">sin</button>
-                <button class="scient">cos</button>
-                <button class="scient">tan</button>
-                <button class="scient">X^y</button>
-                <button class="scient">lg</button>
-                <button class="scient">ln</button>
-                <button class="scient">(</button>
-                <button class="scient">)</button>
+                <button>sin</button>
+                <button>cos</button>
+                <button>tan</button>
+                <button>X^y</button>
+                <button>lg</button>
+                <button>ln</button>
+                <button>(</button>
+                <button>)</button>
             </div>
             <div class="column_scientifique">
-                <button class="scient">√X</button>
-                <button class="scient">X!</button>
-                <button class="scient">1/X</button>
-                <button class="scient">π</button>
+                <button>√X</button>
+                <button>X!</button>
+                <button>1/X</button>
+                <button>π</button>
             </div>
             <div class="base">
-                <button class="num_pad">1</button>
-                <button class="num_pad">2</button>
-                <button class="num_pad">3</button>
-                <button class="num_pad">4</button>
-                <button class="num_pad">5</button>
-                <button class="num_pad">6</button>
-                <button class="num_pad">7</button>
-                <button class="num_pad">8</button>
-                <button class="num_pad">9</button>
-                <button class="num_pad">e</button>
-                <button class="num_pad">0</button>
-                <button class="num_pad">,</button>
-                <button class="effacement column-span2">AC</button>
-                <button class="effacement">DEL</button>
-                <button class="operateur">÷</button>
-                <button class="operateur">*</button>
-                <button class="operateur">+</button>
-                <button class="operateur">-</button>
-                <button class="operateur" id="egal">=</button>
+                <div class="clean">
+                    <button class="column-span2">AC</button>
+                    <button>DEL</button>
+                </div>
+                <div class="number"></div>
+                    <button>1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button>4</button>
+                    <button>5</button>
+                    <button>6</button>
+                    <button>7</button>
+                    <button>8</button>
+                    <button>9</button>
+                    <button>e</button>
+                    <button>0</button>
+                    <button>,</button>
+                <div class="operator">
+                    <button>÷</button>
+                    <button>*</button>
+                    <button>+</button>
+                    <button>-</button>
+                    <button id="egal">=</button>
+                </div>
             </div>
             <button type="button" onclick="TemplateCalc()" id="click">Click</button>
         </div>
