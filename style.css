@@ -24,64 +24,62 @@ body {
     place-content: center;
 }
 
-.calculatrice, .calculatrice > * {
+.calculatrice, .calculatrice > *, .base > *{
     display: grid;
     background-color: black;
-    gap: 5px;
 }
 
 .calculatrice {
-    height: 60vh;
-    width: 33vh;
+    height: 65vh;
+    width: 36vh;
     border-radius: 5%;
-    border: 10px solid black;
+    border: 5px solid black;
     box-shadow: 10px 10px rgb(150, 150, 150);
 }
 
 /* Nombre de colonnes et lignes de la calculatrice */
 #templateCalc {
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: minmax(150px, auto) repeat(5, 1fr) 1px;
+    grid-template-rows: minmax(100px, auto) repeat(5, 1fr) 1px;
 }
 
 button {
-    font-size: x-large;
+    font-size: large;
     /* centre le texte */
     display: grid;
     place-content: center;
-    border: none;
+    border: 2px solid black;
 }
 
 /* Grille contenant des grilles de la calculatrice basique */
 .base {
     grid-area: -7/-5/-2/-1;
-    grid-template-areas: "clean clean"
-                         "number operaor";
-    grid-template-rows: 1fr 3fr;
+    grid-template-areas: "clean operator"
+                         "number operator";
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 4fr;
 }
 
 .clean {
     grid-area: clean;
+    grid-template-columns: 2fr 1fr;
 }
 
 .number {
     grid-area: number;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .operator {
     grid-area: operator;
 }
 
-.column-span2 {
-    grid-column-start: span 2;
-}
-
 .row_scientifique {
-    grid-area: 2/1/4/-1;
-    grid-template-columns: repeat(5, 1fr);
+    grid-area: 2/2/4/-1;
+    grid-template-columns: repeat(4, 1fr);
 }
 .column_scientifique {
-    grid-area: 4/1/-3/2;
+    grid-area: 2/1/-3/2;
 }
 
 /* Fond de différentes couleurs en fonction du type de touche */
@@ -89,7 +87,7 @@ button {
 .number > * {
     background-color: rgb(227, 157, 236);
 }
-.operateur > *, .clean > * {
+.operator > *, .clean > * {
     background-color: rgb(241, 241, 209);
 }
 .row_scientifique > *, .column_scientifique > * {
@@ -99,20 +97,20 @@ button {
 /* Touches spéciales */
 
 /* Bouton pour changer le type de la calculatrice */
-#entry {
+.output {
     grid-area: 1/1/2/-1;
     display: flex;
     color: white;
     font-size: xx-large;
     font-weight: bold;
     justify-content: flex-end;
+    align-items: center;
     padding: 30px 10px;
 }
 #click {
     grid-area: -3/1/span 1/span 1;
 }
-#convert, #inverse, #click, #egal {
+#convert, #inverse, #click {
     background-color: black;
     color: white;
-    border: 1px solid white;
 }

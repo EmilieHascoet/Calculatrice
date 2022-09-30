@@ -10,23 +10,22 @@
 </head>
 <body>
     <div class="header">Calculatrice</div>
-    <div class="aside"></div>
     <div class="main">
         <div class="calculatrice" id="templateCalc">
             <div class="output">0</div>
             <div class="row_scientifique">
-                <button type="button" onclick="Inverse()" class="scient" id="inverse">2nd</button>
                 <button type="button" onclick="Convert()" class="scient" id="convert">deg</button>
                 <button>sin</button>
                 <button>cos</button>
                 <button>tan</button>
-                <button>X^y</button>
                 <button>lg</button>
                 <button>ln</button>
                 <button>(</button>
                 <button>)</button>
             </div>
             <div class="column_scientifique">
+                <button type="button" onclick="Inverse()" class="scient" id="inverse">2nd</button>
+                <button>X^y</button>
                 <button>√X</button>
                 <button>X!</button>
                 <button>1/X</button>
@@ -34,10 +33,10 @@
             </div>
             <div class="base">
                 <div class="clean">
-                    <button class="column-span2">AC</button>
-                    <button>DEL</button>
+                    <button>ac</button>
+                    <button>del</button>
                 </div>
-                <div class="number"></div>
+                <div class="number">
                     <button>1</button>
                     <button>2</button>
                     <button>3</button>
@@ -50,18 +49,17 @@
                     <button>e</button>
                     <button>0</button>
                     <button>,</button>
+                </div>
                 <div class="operator">
                     <button>÷</button>
                     <button>*</button>
                     <button>+</button>
                     <button>-</button>
-                    <button id="egal">=</button>
+                    <button>=</button>
                 </div>
             </div>
             <button type="button" onclick="TemplateCalc()" id="click">Click</button>
         </div>
-    </div>
-    <div class="footer"></div> 
-    
+    </div> 
 </body>
 </html>
