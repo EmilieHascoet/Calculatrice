@@ -33,14 +33,14 @@ body {
     height: 65vh;
     width: 36vh;
     border-radius: 5%;
-    border: 5px solid black;
+    border: 10px solid black;
     box-shadow: 10px 10px rgb(150, 150, 150);
 }
 
 /* Nombre de colonnes et lignes de la calculatrice */
 #templateCalc {
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: minmax(100px, auto) repeat(5, 1fr) 1px;
+    grid-template-rows: minmax(110px, auto) repeat(5, 1fr) 1px;
 }
 
 button {
